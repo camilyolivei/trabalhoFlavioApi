@@ -1,0 +1,37 @@
+# 1. Iniciar o projeto Node (se ainda não tiver feito)
+npm init -y
+
+# 2. Instalar dependências principais
+npm install express cors
+
+# 3. Instalar dependências de tipos (para TypeScript)
+npm install --save-dev @types/express @types/cors @types/node
+
+# 4. Instalar TypeScript e utilitário para rodar TS em desenvolvimento
+npm install --save-dev typescript ts-node-dev
+
+# 5. Criar configuração do TypeScript
+npx tsc --init
+
+# 6. Ajustar o tsconfig.json (procure por estas opções e edite):
+# "rootDir": "./src"
+# "outDir": "./dist"
+# "esModuleInterop": true
+# "strict": true
+
+# 7. Estrutura de pastas
+mkdir src
+
+
+# 8. Ajustar o package.json (scripts)
+# Deixe assim:
+#  "scripts": {
+#    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+#    "build": "tsc",
+#    "start": "node dist/server.js"
+#  }
+
+# 9. Rodar em desenvolvimento
+npm run dev
+
+
